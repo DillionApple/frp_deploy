@@ -1,0 +1,11 @@
+[Unit]
+Description=frps
+
+[Service]
+ExecStart=/bin/bash -c "./frps -c frps.ini"
+WorkingDirectory=/etc/frp/
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
